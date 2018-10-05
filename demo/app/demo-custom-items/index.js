@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import moment from 'moment'
 
 import Timeline from 'react-calendar-timeline'
+import containerResizeDetector from '../../../src/resize-detector/container'
 // import containerResizeDetector from 'react-calendar-timeline/lib/resize-detector/container'
 
 import generateFakeData from '../generate-fake-data'
@@ -151,14 +152,14 @@ export default class App extends Component {
             borderColor,
             borderStyle: 'solid',
             borderWidth: 1,
-            borderRadius: 4,
+            borderRadius: 2,
             borderLeftWidth: itemContext.selected ? 3 : 1,
             borderRightWidth: itemContext.selected ? 3 : 1,
           }
         }) }
       >
         {itemContext.useResizeHandle ? (
-          <div {...leftResizeProps} />
+          <div {...leftResizeProps} >Bom</div>
         ) : null}
 
         <div
@@ -175,8 +176,8 @@ export default class App extends Component {
 
 
         {itemContext.useResizeHandle ? (
-          <div {...rightResizeProps} />
-        ) : null}
+          <div {...rightResizeProps} >Bom 1 </div>
+        ) : <div {...rightResizeProps} >Bom 2</div>}
       </div>
     )
   }
@@ -208,10 +209,10 @@ export default class App extends Component {
         itemsSorted
         itemTouchSendsClick={false}
         stackItems
-        itemHeightRatio={0.75}
+        itemHeightRatio={0.5}
         lineHeight={40}
         showCursorLine
-        // resizeDetector={containerResizeDetector}
+         resizeDetector={containerResizeDetector}
 
         defaultTimeStart={defaultTimeStart}
         defaultTimeEnd={defaultTimeEnd}
