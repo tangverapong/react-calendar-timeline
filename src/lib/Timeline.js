@@ -573,7 +573,7 @@ export default class ReactCalendarTimeline extends Component {
     let zoom = visibleTimeEnd - visibleTimeStart
 
     // can't zoom in more than to show one hour
-    if (zoom < 360000) {
+    if (zoom < 60000) {
       return
     }
 

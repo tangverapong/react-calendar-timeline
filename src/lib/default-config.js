@@ -32,7 +32,8 @@ export const defaultHeaderLabelFormats = {
   hourMedium: 'HH:00',
   hourMediumLong: 'L, HH:00',
   hourLong: 'dddd, LL, HH:00',
-  time: 'LLL'
+  minute: 'dddd, LL, HH:mm:00',
+  time: 'LLL',
 }
 
 export const defaultSubHeaderLabelFormats = {
@@ -48,5 +49,5 @@ export const defaultSubHeaderLabelFormats = {
   hourShort: 'HH',
   hourLong: 'HH:00',
   minuteShort: 'mm',
-  minuteLong: 'HH:mm'
+  minuteLong: 'HH:mm',
 }
